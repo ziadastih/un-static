@@ -11,6 +11,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -167,8 +168,11 @@ body {
   top: 0;
   left: 0;
 }
+
 .form-container {
   width: 80vw;
+
+  margin-bottom: 20vh;
   background-color: white;
   border-radius: 5px;
   position: fixed;
@@ -186,6 +190,13 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+}
+.input-checkbox {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .form-header img {
@@ -217,14 +228,16 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .input-container input {
-  padding: 5px;
+  height: 30px;
+  width: 40vw;
 }
 ::placeholder {
   position: absolute;
   right: 10px;
+  padding: 5px;
 }
 .location-container {
   width: 70vw;
@@ -260,6 +273,20 @@ body {
   padding: 10px 20px;
   border: none;
   background-color: var(--yellow);
+}
+
+.form-confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .display-flex {

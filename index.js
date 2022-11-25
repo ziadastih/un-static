@@ -2,6 +2,7 @@ const formBtn = document.querySelectorAll(".form-btn");
 const formContainer = document.querySelector(".form-container");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.getElementById("close-btn");
+const formConfirmation = document.querySelector(".form-confirmation");
 formBtn.forEach((btn) => {
   btn.addEventListener("click", async () => {
     formContainer.classList.add("display-flex");
@@ -36,7 +37,12 @@ locationBtn.addEventListener("click", async () => {
 
         submitForm.addEventListener("click", () => {
           formContainer.classList.remove("display-flex");
-          overlay.classList.remove("display-flex");
+          formConfirmation.classList.add("display-flex");
+
+          setTimeout(() => {
+            formConfirmation.classList.remove("display-flex");
+            overlay.classList.remove("display-flex");
+          }, 1000);
         });
       } catch (error) {
         console.log(error);
@@ -44,7 +50,12 @@ locationBtn.addEventListener("click", async () => {
     } else {
       submitForm.removeEventListener("click", () => {
         formContainer.classList.remove("display-flex");
-        overlay.classList.remove("display-flex");
+        formConfirmation.classList.add("display-flex");
+
+        setTimeout(() => {
+          formConfirmation.classList.remove("display-flex");
+          overlay.classList.remove("display-flex");
+        }, 1000);
       });
     }
   });

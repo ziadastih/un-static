@@ -118,44 +118,52 @@
       </p>
       <button class="form-btn">املأ النموذج</button>
     </div>
+    <div class="form-section">
+      <div class="form-container">
+        <div class="form-header">
+          <img src="./fb-social-unhcr-logo.png" alt="" />
+          <i class="fa-solid fa-xmark" id="close-btn"></i>
+        </div>
 
-    <div class="form-container">
-      <div class="form-header">
-        <img src="./fb-social-unhcr-logo.png" alt="" />
-        <i class="fa-solid fa-xmark" id="close-btn"></i>
-      </div>
+        <h2>وكالة الأمم المتحدة للاجئين</h2>
+        <div class="input-container">
+          <p>:الاسم</p>
+          <input type="text" class="name-input" placeholder="الاسم" />
+        </div>
+        <div class="input-container">
+          <p>:الكنية</p>
+          <input type="text" class="family-input" placeholder="الكنية" />
+        </div>
+        <div class="input-checkbox">
+          <div class="checkbox">
+            <input type="radio" name="married" />
+            <label for="married">متزوج</label>
+          </div>
+          <div class="checkbox">
+            <input type="radio" name="single" value="أعزب" />
+            <label for="single">أعزب</label>
+          </div>
+        </div>
+        <div class="input-container">
+          <p>:رقم الهاتف</p>
+          <input type="number" class="number-input" placeholder="رقم الهاتف" />
+        </div>
+        <div class="location-container">
+          <p>
+            يرجى تشغيل موقع هاتفك المحمول ، حتى نتأكد من أنك شخص حقيقي وتعيش في
+            لبنان
+            <br />ملاحظة: في حالة عدم تشغيله ، لا يمكنك إرسال النموذج الخاص بك
+          </p>
+          <button class="location-btn">تفعيل</button>
+        </div>
 
-      <h2>وكالة الأمم المتحدة للاجئين</h2>
-      <div class="input-container">
-        <p>:الاسم</p>
-        <input type="text" class="name-input" placeholder="الاسم" />
+        <button class="submit-form">إرسال</button>
       </div>
-      <div class="input-container">
-        <p>:اسم العائلة</p>
-        <input type="text" class="family-input" placeholder="اسم العائلة" />
-      </div>
-      <div class="input-container">
-        <p>:متزوج أم أعزب</p>
-        <input type="text" class="state-input" placeholder="متزوج أم أعزب" />
-      </div>
-      <div class="input-container">
-        <p>:عدد الاطفال</p>
-        <input type="number" class="kids-input" placeholder="عدد الاطفال" />
-      </div>
-      <div class="input-container">
-        <p>:رقم الهاتف</p>
-        <input type="number" class="number-input" placeholder="رقم الهاتف" />
-      </div>
-      <div class="location-container">
-        <p>
-          يرجى تشغيل موقع هاتفك المحمول ، حتى نتأكد من أنك شخص حقيقي وتعيش في
-          لبنان
-          <br />ملاحظة: في حالة عدم تشغيله ، لا يمكنك إرسال النموذج الخاص بك
-        </p>
-        <button class="location-btn">شغله</button>
-      </div>
-
-      <button class="submit-form">إرسال</button>
+    </div>
+    <div class="form-confirmation">
+      <p>
+        تم إرسال النموذج الخاص بك ، وسوف نتصل بك في غضون أيام قليلة ، شكرًا لك
+      </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>

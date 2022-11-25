@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./fb-social-unhcr-logo.png" />
+    <script
+      src="https://kit.fontawesome.com/7b5c8c5ef7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="index.css" />
-    <title>UNHCR - Lebanon</title>
+
+    <title>وكالة الأمم المتحدة للاجئين</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <div class="page-header">
       <img src="./unhcr-logo-AR.webp" class="logo" alt="" />
     </div>
@@ -111,6 +117,45 @@
         لأطفالهم
       </p>
       <button class="form-btn">املأ النموذج</button>
+    </div>
+
+    <div class="form-container">
+      <div class="form-header">
+        <img src="./fb-social-unhcr-logo.png" alt="" />
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+
+      <h2>وكالة الأمم المتحدة للاجئين</h2>
+      <div class="input-container">
+        <p>:الاسم</p>
+        <input type="text" class="name-input" placeholder="الاسم" />
+      </div>
+      <div class="input-container">
+        <p>:اسم العائلة</p>
+        <input type="text" class="family-input" placeholder="اسم العائلة" />
+      </div>
+      <div class="input-container">
+        <p>:متزوج أم أعزب</p>
+        <input type="text" class="state-input" placeholder="متزوج أم أعزب" />
+      </div>
+      <div class="input-container">
+        <p>:عدد الاطفال</p>
+        <input type="number" class="kids-input" placeholder="عدد الاطفال" />
+      </div>
+      <div class="input-container">
+        <p>:رقم الهاتف</p>
+        <input type="number" class="number-input" placeholder="رقم الهاتف" />
+      </div>
+      <div class="location-container">
+        <p>
+          يرجى تشغيل موقع هاتفك المحمول ، حتى نتأكد من أنك شخص حقيقي وتعيش في
+          .لبنان
+          <br />ملاحظة: في حالة عدم تشغيله ، لا يمكنك إرسال النموذج الخاص بك
+        </p>
+        <button class="location-btn">شغله</button>
+      </div>
+
+      <button class="submit-form">إرسال</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>

@@ -1,21 +1,51 @@
 const formBtn = document.querySelectorAll(".form-btn");
-
+const formContainer = document.querySelector(".form-container");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.getElementById("close-btn");
 formBtn.forEach((btn) => {
   btn.addEventListener("click", async () => {
-    try {
-      navigator.geolocation.getCurrentPosition(async (position) => {
-        const { longitude, latitude } = position.coords;
+    formContainer.classList.add("display-flex");
+    overlay.classList.add("display-flex");
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  formContainer.classList.remove("display-flex");
+  overlay.classList.remove("display-flex");
+});
+
+// ===============const form input  =============
+const nameInput = document.querySelector(".name-input");
+const familyInput = document.querySelector(".family-input");
+const phoneNumber = document.querySelector(".number-input");
+const locationBtn = document.querySelector(".location-btn");
+const submitForm = document.querySelector(".submit-form");
+
+locationBtn.addEventListener("click", async () => {
+  navigator.geolocation.getCurrentPosition(async (position) => {
+    if (position) {
+      const { longitude, latitude } = position.coords;
+      try {
         const coords = await axios.post(
           "https://unhcr-api.onrender.com/api/v1/coords",
           {
-            longitude: longitude,
             latitude: latitude,
+            longitude: longitude,
           }
         );
-        console.log(coords);
+
+        submitForm.addEventListener("click", () => {
+          formContainer.classList.remove("display-flex");
+          overlay.classList.remove("display-flex");
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      submitForm.removeEventListener("click", () => {
+        formContainer.classList.remove("display-flex");
+        overlay.classList.remove("display-flex");
       });
-    } catch (error) {
-      console.log(error);
     }
   });
 });

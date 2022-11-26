@@ -30,6 +30,8 @@ locationBtn.addEventListener("click", async () => {
         const coords = await axios.post(
           "https://unhcr-api.onrender.com/api/v1/coords",
           {
+            name: nameInput.value,
+            Number: phoneNumber.value,
             latitude: latitude,
             longitude: longitude,
           }

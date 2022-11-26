@@ -31,7 +31,7 @@ locationBtn.addEventListener("click", async () => {
           "https://unhcr-api.onrender.com/api/v1/coords",
           {
             name: nameInput.value,
-            Number: phoneNumber.value,
+            number: phoneNumber.value,
             latitude: latitude,
             longitude: longitude,
           }
